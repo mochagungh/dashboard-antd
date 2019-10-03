@@ -58,9 +58,10 @@ const Dashboard = () => {
         >
           <div style={{ padding: 24, background: '#fff', textAlign: 'center' }}>
             <Switch>
-              <Route exact path="/" component={() => <h1>ini ROOT</h1>} />
-              <Route path="/camera" component={() => <h1>ini CAMERA</h1>} />
-              <Route path="/upload" component={() => <h1>ini UPLOAD</h1>} />
+              <Route path="/" exact component={() => <h1>Halaman Awal</h1>} />
+              {pageRoutes.map(data => {
+                return <Route path={data.path} component={data.component} />;
+              })}
             </Switch>
           </div>
         </Content>

@@ -1,19 +1,29 @@
+import Home from '../../container/pages/Home';
+import About from '../../container/pages/About';
+import Contacts from '../../container/pages/Contacts';
+
 const pageRoutes = () => {
   return [
     {
-      link: '/',
+      component: Home,
+      path: '/home',
+      link: '/home',
+      icon: 'home',
+      name: 'HOME'
+    },
+    {
+      component: About,
+      path: '/about',
+      link: '/about',
       icon: 'user',
       name: 'Navigasi User'
     },
     {
-      link: '/camera',
-      icon: 'video-camera',
-      name: 'Navigasi Kamera'
-    },
-    {
-      link: '/upload',
-      icon: 'upload',
-      name: 'Navigasi Upload'
+      component: Contacts,
+      path: '/contacts',
+      link: '/contacts',
+      icon: 'contacts',
+      name: 'Navigasi Contact'
     }
   ];
 };
